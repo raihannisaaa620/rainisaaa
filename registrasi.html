@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TK Islam Al-Kamilah - Registrasi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="foto/logo.png" />
+    <style>
+        /* Styling untuk form select */
+        
+        .form-select {
+            width: 100%;
+            padding: 10px 15px;
+            font-size: 1rem;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            background-color: #ffffff;
+            color: #495057;
+            transition: border-color 0.3s ease;
+        }
+        /* Ketika select dalam keadaan fokus */
+        
+        .form-select:focus {
+            border-color: #0F2167;
+            /* Ganti dengan warna yang sesuai */
+            outline: none;
+            box-shadow: 0 0 0 0.25rem rgba(15, 33, 103, 0.25);
+            /* Menambahkan bayangan saat fokus */
+        }
+        /* Styling untuk label */
+        
+        .form-label {
+            font-weight: bold;
+            color: #495057;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
+        /* Styling untuk option di dalam select */
+        
+        .form-select option {
+            padding: 10px;
+            font-size: 1rem;
+            color: #495057;
+            background-color: #ffffff;
+        }
+        /* Styling saat hover di atas option */
+        
+        .form-select option:hover {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+
+<body style="background-image: url('foto/bodi.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+
+    <div style="padding-left: 50px; padding-right: 50px">
+        <nav class="menuatas menuatas-expand-lg bg-white menuatas-light sticky-top p-0" id="top">
+            <a href="index.html" class="menuatas-brand lurus align-items-center px-4 px-lg-5 d-flex align-items-center">
+                <img src="foto/logo.png" width="50" style="margin-right: 10px;">
+                <h1 class="m-0">TK Islam Al-Kamilah.</h1>
+            </a>
+            <button type="button" class="menuatas-toggler me-4" data-bs-toggle="collapse" data-bs-target="#menuatasCollapse">
+        <span class="menuatas-toggler-icon"></span>
+      </button>
+            <div class="collapse menuatas-collapse" id="menuatasCollapse">
+                <div class="menuatas-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="menu-item tombol-link active">Home</a>
+                    <a href="about.html" class="menu-item tombol-link active">About</a>
+                    <a href="galeri.html" class="menu-item tombol-link active">Galeri</a>
+                    <a href="registrasi.html" class="menu-item tombol-link active">Registrasi</a>
+                    <a href="kontak.html" class="menu-item tombol-link active">Kontak</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="kontainer">
+        <div class="kontainer-jarak p-0">
+            <div id="header-jumbotronbesar" class="jumbotronbesar slide">
+                <div class="jumbotronbesar-inner">
+                    <div class="jumbotronbesar-item active">
+                        <img class="w-100 gambar" src="foto/bgutama.jpg" alt="Image" style="height: 300px; object-fit: cover" />
+                        <div class="jumbotronbesar-judul">
+                            <div class="kontainer">
+                                <div class="baris kolom-rata-tengah">
+                                    <div class="kolom-besar-8">
+                                        <marquee behavior="scroll" direction="left">
+                                            <h1 class="display-6 text-putih mb-3" style="color: #ffffff">
+                                                Registrasi
+                                            </h1>
+                                        </marquee>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br /><br />
+    <div class="kontainer-xxl py-5">
+        <div class="kontainer">
+            <div class="baris g-5 jarak-items-akhir">
+                <div class="kolom-sedang-12 horizontal-otomatis" style="padding-bottom: 20%;">
+                    <h2><b>Form Registrasi Siswa TK Islam Al - Kamilah</b></h2>
+                    <br>
+
+                    <!-- Form Pendaftaran Siswa -->
+                    <form action="proses_daftar.php" method="POST">
+                        <div class="mb-3">
+                            <label for="nama" class="form-label">Nama Lengkap Siswa</label>
+                            <input type="text" class="form-control" id="nama" name="nama" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tanggal_lahir" class="form-label">Tanggal Lahir</label>
+                            <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
+                            <select class="form-select" id="jenis_kelamin" name="jenis_kelamin" required>
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+              </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="alamat" class="form-label">Alamat</label>
+                            <input type="text" class="form-control" id="alamat" name="alamat" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nama_ayah" class="form-label">Nama Ayah</label>
+                            <input type="text" class="form-control" id="nama_ayah" name="nama_ayah" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nama_ibu" class="form-label">Nama Ibu</label>
+                            <input type="text" class="form-control" id="nama_ibu" name="nama_ibu" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="kontak" class="form-label">Nomor Kontak</label>
+                            <input type="tel" class="form-control" id="kontak" name="kontak" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary tombolbiru" style="color: white;">Daftar</button>
+                    </form>
+                    <!-- End Form Pendaftaran Siswa -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="kontainer-jarak text-putihabu footer" style="background-color: #0F2167">
+        <div class="baris">
+            <div class="kolom-sedang-12 teks-tengah">
+                <br /> ©2024 TK Islam Al-Kamilah | Raihan Nisa Nurul Kamilah
+                <br />
+                <br />
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
